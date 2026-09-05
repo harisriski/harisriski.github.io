@@ -305,6 +305,58 @@ h1, h2, h3, h4, h5, h6 {
   color: #0563bb;
 }
 
+#hero .hero-cta {
+  margin-top: 35px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+#hero .btn-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 28px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  letter-spacing: 0.3px;
+}
+
+#hero .btn-cta i {
+  font-size: 18px;
+}
+
+#hero .btn-cta-primary {
+  background: #0563bb;
+  color: #fff;
+  border: 2px solid #0563bb;
+  box-shadow: 0 4px 15px rgba(5, 99, 187, 0.3);
+}
+
+#hero .btn-cta-primary:hover {
+  background: #0678e3;
+  border-color: #0678e3;
+  box-shadow: 0 6px 20px rgba(5, 99, 187, 0.45);
+  transform: translateY(-2px);
+}
+
+#hero .btn-cta-outline {
+  background: transparent;
+  color: #45505b;
+  border: 2px solid #45505b;
+}
+
+#hero .btn-cta-outline:hover {
+  background: #45505b;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(69, 80, 91, 0.3);
+}
+
 @media (max-width: 992px) {
   #hero {
     text-align: center;
@@ -317,6 +369,9 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 10px;
     font-size: 20px;
     line-height: 24px;
+  }
+  #hero .hero-cta {
+    justify-content: center;
   }
 }
 
@@ -397,6 +452,50 @@ section {
   margin-bottom: 0;
 }
 
+.about .about-metrics {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.about .metric-card {
+  background: #fbfcfd;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 18px 12px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  height: 100%;
+}
+
+.about .metric-card:hover {
+  transform: translateY(-4px);
+  border-color: #0563bb;
+  box-shadow: 0 8px 20px rgba(5, 99, 187, 0.1);
+}
+
+.about .metric-card i {
+  font-size: 26px;
+  color: #0563bb;
+  margin-bottom: 8px;
+  display: inline-block;
+}
+
+.about .metric-card h4 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #45505b;
+  margin-bottom: 4px;
+  font-family: "Raleway", sans-serif;
+}
+
+.about .metric-card p {
+  font-size: 12px;
+  color: #728394;
+  margin-bottom: 0;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
 /*--------------------------------------------------------------
 # Facts
 --------------------------------------------------------------*/
@@ -436,38 +535,84 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Akills
+# Skills
 --------------------------------------------------------------*/
-.skills .progress {
-  height: 50px;
-  display: block;
-  background: none;
+.skills .skills-card {
+  background: #fff;
+  padding: 24px 22px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  height: 100%;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid #eef0f3;
 }
 
-.skills .progress .skill {
-  padding: 10px 0;
-  margin: 0 0 6px 0;
-  text-transform: uppercase;
-  display: block;
-  font-weight: 600;
+.skills .skills-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(5, 99, 187, 0.12);
+  border-color: #d0e1f9;
+}
+
+.skills .skills-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f0f2f5;
+}
+
+.skills .skills-header i {
+  font-size: 20px;
+  color: #0563bb;
+  margin-right: 12px;
+  background: #eef5fc;
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.skills .skills-header h4 {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
+  color: #272829;
   font-family: "Poppins", sans-serif;
+}
+
+.skills .skills-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skills .skill-badge {
+  background: #f4f6f9;
   color: #45505b;
+  padding: 6px 13px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  border: 1px solid #e2e6ea;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
 }
 
-.skills .progress .skill .val {
-  float: right;
-  font-style: normal;
+.skills .skill-badge:hover {
+  background: #eef5fc;
+  color: #0563bb;
+  border-color: #b9d5f5;
+  transform: translateY(-1px);
 }
 
-.skills .progress-bar-wrap {
-  background: #f2f3f5;
-}
-
-.skills .progress-bar {
-  width: 1px;
-  height: 10px;
-  transition: .9s;
-  background-color: #0563bb;
+.skills .skill-badge i {
+  font-size: 14px;
+  color: #0563bb;
 }
 
 /*--------------------------------------------------------------
@@ -536,6 +681,42 @@ section {
 --------------------------------------------------------------*/
 .portfolio .portfolio-item {
   margin-bottom: 30px;
+}
+
+.portfolio .portfolio-header-links {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.portfolio .btn-portfolio-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 18px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 50px;
+  border: 1px solid #d0d7de;
+  color: #45505b;
+  background: #fff;
+  transition: all 0.25s ease-in-out;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.portfolio .btn-portfolio-pill i {
+  font-size: 16px;
+  color: #0563bb;
+}
+
+.portfolio .btn-portfolio-pill:hover {
+  border-color: #0563bb;
+  color: #0563bb;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(5, 99, 187, 0.15);
 }
 
 .portfolio #portfolio-flters {
